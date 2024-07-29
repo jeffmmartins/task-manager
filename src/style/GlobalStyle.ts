@@ -10,4 +10,8 @@ export const GlobalStyle = createGlobalStyle`
  body {
     background-color: #ffffff ;
  }
+
+ body, button, input {
+    font-family: "Poppins", sans-serif;
+ }
 `
