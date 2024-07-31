@@ -1,10 +1,11 @@
 import React from "react";
+import * as S from "./style"
 
 export const Form: React.FC = () => {
-    return(
-        <>
-        <input type="text" placeholder="Adicionar Tarefa" />
-        <button>Adicionar</button>
-        </>
+    return (
+        <S.ContainerSection>
+            <input type="text" placeholder="Adicionar Tarefa" />
+            <button>Adicionar</button>
+        </S.ContainerSection>
     )
 }
