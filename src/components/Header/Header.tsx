@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
     return (
         <>
             <S.Container>
-                <h1><BsRocketFill/> To do List</h1>
+                <S.Title><BsRocketFill/> To do List</S.Title>
             </S.Container>
         </>
     )
