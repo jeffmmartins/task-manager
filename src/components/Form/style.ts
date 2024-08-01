@@ -11,6 +11,4 @@ width: 500px;
 height: 32px;
 font-size: 1rem;
 font-weight: 500;
-
-
 `
