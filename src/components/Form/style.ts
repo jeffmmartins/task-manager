@@ -7,5 +7,5 @@ align-items: center;
 gap: 0.5rem;
 `
 export const InputSection = styled.input`
-max-width: 413px;
+width: 500px;
 `
