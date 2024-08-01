@@ -8,4 +8,9 @@ gap: 0.5rem;
 `
 export const InputSection = styled.input`
 width: 500px;
+height: 32px;
+font-size: 1rem;
+font-weight: 500;
+
+
 `
