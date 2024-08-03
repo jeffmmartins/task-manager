@@ -1,12 +1,13 @@
 import React from "react";
 import { Form } from "../Form/Form";
+import * as S from "./style"
 
 export const MainContent: React.FC = () => {
     return (
         <>
-            <main>
+            <S.MainContainer>
                 <Form />
-            </main>
+            </S.MainContainer>
         </>
     )
 }
