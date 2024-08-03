@@ -5,7 +5,7 @@ import { FaPlusCircle } from "react-icons/fa";
 export const Form: React.FC = () => {
     return (
         <S.ContainerSection>
-            <S.InputSection type="text" placeholder="Adicionar Tarefa"/>
+            <S.InputSection type="text" placeholder="Add Task"/>
             <S.ButtonAddTask><FaPlusCircle size={"32px"}/></S.ButtonAddTask>
         </S.ContainerSection>
     )

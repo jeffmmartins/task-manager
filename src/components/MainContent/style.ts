@@ -1,4 +1,4 @@
-import styled, { Styled } from "styled-components";
+import styled from "styled-components";
 
 export const MainContainer = styled.main`
 margin: 60px;
