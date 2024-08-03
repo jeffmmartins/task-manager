@@ -2,10 +2,11 @@ import React from "react";
 import { Form } from "../Form/Form";
 
 export const MainContent: React.FC = () => {
-    return(
+    return (
         <>
-        <h1>Lista de Tarefas</h1>
-        <Form/>
+            <main>
+                <Form />
+            </main>
         </>
     )
 }
