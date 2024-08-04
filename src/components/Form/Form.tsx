@@ -14,7 +14,7 @@ export const Form: React.FC = () => {
                 <li>teste</li>
                 <li>teste</li>
             </ul>
-        </S.TaskSection>
+            </S.TaskSection>
         </>
     )
 }

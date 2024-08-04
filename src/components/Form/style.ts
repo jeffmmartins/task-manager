@@ -23,6 +23,9 @@ border: none;
 `
 
 export const TaskSection = styled.section`
+display: flex;
+justify-content: center;
+
 width: 500px;
 box-shadow: 10px 10px 5px black;
 `
