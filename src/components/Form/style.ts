@@ -1,6 +1,10 @@
 import  { styled } from "styled-components";
 
 
+export const ContainerSection = styled.section`
+margin-bottom: 50px;
+`
+
 export const FormTask = styled.form`
 display: flex;
 justify-content: center;
