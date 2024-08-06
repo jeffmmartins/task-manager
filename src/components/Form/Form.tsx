@@ -6,7 +6,7 @@ export const Form: React.FC = () => {
     return (
         <>
         <S.ContainerSection>
-            <S.InputSection type="text" placeholder="Add Task"/>
+            <S.InputTask type="text" placeholder="Add Task"/>
             <S.ButtonAddTask><FaPlusCircle size={"32px"}/></S.ButtonAddTask>
         </S.ContainerSection>
         <S.TaskSection>
