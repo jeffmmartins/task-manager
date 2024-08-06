@@ -6,6 +6,10 @@ justify-content: center;
 align-items: center;
 gap: 0.5rem;
 `
+export const FormTask = styled.form`
+
+`
+
 export const InputTask = styled.input`
 width: 500px;
 height: 32px;
