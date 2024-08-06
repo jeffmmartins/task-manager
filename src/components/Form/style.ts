@@ -1,13 +1,11 @@
 import  { styled } from "styled-components";
 
-export const ContainerSection = styled.section`
+
+export const FormTask = styled.form`
 display: flex;
 justify-content: center;
 align-items: center;
 gap: 0.5rem;
-`
-export const FormTask = styled.form`
-
 `
 
 export const InputTask = styled.input`
