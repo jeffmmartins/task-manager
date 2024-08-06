@@ -12,10 +12,12 @@ export const Form: React.FC = () => {
                 </S.FormTask>
             </S.ContainerSection>
             <S.TaskSection>
-                <ul>
-                    <li>teste</li>
-                    <li>teste</li>
-                </ul>
+                <S.ListTask>
+                    <ul>
+                        <li>teste <button>remover</button></li>
+                        <li>teste <button>remover</button></li>
+                    </ul>
+                </S.ListTask>
             </S.TaskSection>
         </>
     )
