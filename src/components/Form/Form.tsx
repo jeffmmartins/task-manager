@@ -3,12 +3,14 @@ import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import { useForm } from "useform-simple-hook";
 
-interface 
+interface Data {
+    formData: string;
+}
 
 export const Form: React.FC = () => {
     const {register, handleSubmit} = useForm()
 
-    const data = (formData) => {
+    const data = (formData:Data) => {
         console.log(formData)
     }
 
