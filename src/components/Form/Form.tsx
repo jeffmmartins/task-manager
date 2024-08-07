@@ -3,14 +3,20 @@ import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import { useForm } from "useform-simple-hook";
 
+interface 
+
 export const Form: React.FC = () => {
-    const [register, handleSubmit] = useForm
+    const {register, handleSubmit} = useForm()
+
+    const data = (formData) => {
+        console.log(formData)
+    }
 
     return (
         <>
             <S.ContainerSection>
-                <S.FormTask >
-                    <S.InputTask type="text" placeholder="Add Task" />
+                <S.FormTask onSubmit={handleSubmit(data)}>
+                    <S.InputTask type="text" placeholder="Add Task" {...register("name")}/>
                     <S.ButtonAddTask><FaPlusCircle size={"32px"} /></S.ButtonAddTask>
                 </S.FormTask>
             </S.ContainerSection>
