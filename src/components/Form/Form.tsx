@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
@@ -12,8 +12,13 @@ interface IFormInput{
 }
 
 export const Form: React.FC = () => {
-    const [task, setTask ] = useState("");
+    const [task, setTask ] = useState(null);
     const {register, handleSubmit} = useForm<IFormInput>();
+    const tasks = localStorage.getItem("Task")
+
+    useEffect(() => {
+        
+    },[])
 
     const data = (formData: DataInput) => {
         setTask(formData.name)
