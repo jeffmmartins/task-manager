@@ -1,17 +1,21 @@
 import React from "react";
 import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
-import { useForm } from "useform-simple-hook";
+import { useForm } from "react-hook-form";
 
-interface Data {
-    formData: string;
+interface DataInput {
+    name:string;
+}
+
+interface IFormInput{
+    name:string;
 }
 
 export const Form: React.FC = () => {
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit} = useForm<IFormInput>()
 
-    const data = (formData:Data) => {
-        console.log(formData)
+    const data = (formData: DataInput) => {
+        console.log(formData.name)
     }
 
     return (
