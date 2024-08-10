@@ -12,13 +12,16 @@ interface IFormInput{
 }
 
 export const Form: React.FC = () => {
-    const [task, setTask ] = useState(null);
+    const [task, setTask ] = useState("");
     const {register, handleSubmit} = useForm<IFormInput>();
-    const tasks = localStorage.getItem("Task")
 
-    useEffect(() => {
-        
-    },[])
+    useEffect(()=>{
+        const tasks = localStorage.getItem("Tasks")
+        if (tasks === "") {
+            setTask(tasks);
+        }
+    },[task])
+    
 
     const data = (formData: DataInput) => {
         setTask(formData.name)
