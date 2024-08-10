@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
@@ -12,15 +12,17 @@ interface IFormInput{
 }
 
 export const Form: React.FC = () => {
-    const {register, handleSubmit} = useForm<IFormInput>()
+    const [task, setTask ] = useState("");
+    const {register, handleSubmit} = useForm<IFormInput>();
 
     const data = (formData: DataInput) => {
-        console.log(formData.name)
+        setTask(formData.name)
     }
 
     return (
         <>
             <S.ContainerSection>
+                {task}
                 <S.FormTask onSubmit={handleSubmit(data)}>
                     <S.InputTask type="text" placeholder="Add Task" {...register("name")}/>
                     <S.ButtonAddTask><FaPlusCircle size={"32px"} /></S.ButtonAddTask>
