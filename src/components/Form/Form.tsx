@@ -23,8 +23,8 @@ export const Form: React.FC = () => {
     },[task])
 
     useEffect(()=>{
-
-    },[])
+        localStorage.setItem("tasks", JSON.stringify(task))
+    },[task])
     
 
     const data = (formData: DataInput) => {
