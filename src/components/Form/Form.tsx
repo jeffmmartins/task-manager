@@ -28,7 +28,12 @@ export const Form: React.FC = () => {
     
 
     const data = (formData: DataInput) => {
-        setTask(formData.name)
+        if(!formData.name){
+            alert("Favor Preencher campo")
+            return
+        }
+        setTask([...task, formData.name]);
+        reset();
     }
 
     return (
