@@ -21,6 +21,10 @@ export const Form: React.FC = () => {
             setTask(tasks);
         }
     },[task])
+
+    useEffect(()=>{
+
+    },[])
     
 
     const data = (formData: DataInput) => {
