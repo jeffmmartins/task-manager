@@ -15,7 +15,7 @@ export const Form: React.FC = () => {
     const tasks = localStorage.getItem('tasks')
     const info:string[] = JSON.parse(tasks || '[]')
     const [task, setTask ] = useState<string[]>(info);
-    const {register, handleSubmit} = useForm<IFormInput>();
+    const {register, handleSubmit, reset} = useForm<IFormInput>();
 
    
 
@@ -25,7 +25,7 @@ export const Form: React.FC = () => {
             return
         }
         setTask([...task, formData.name]);
-        
+        reset();
     }
 
     useEffect(()=>{
