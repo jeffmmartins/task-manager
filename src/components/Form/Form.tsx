@@ -14,14 +14,14 @@ interface IFormInput{
 
 
 export const Form: React.FC = () => {
-    const [task, setTask ] = useState(['']);
+    const [task, setTask ] = useState<string[]>(['']);
     const {register, handleSubmit} = useForm<IFormInput>();
 
     useEffect(()=>{
-        const tasks:string | null = localStorage.getItem('task')
+        const tasks = localStorage.getItem('task')
         
-        const Data = JSON.parse(tasks)
-        setTask(Data)
+        const data = JSON.parse(tasks || '[]')
+        setTask(data ?? [])
     },[])
 
     const data = (formData: DataInput) => {
@@ -29,6 +29,7 @@ export const Form: React.FC = () => {
             alert("Favor Preencher campo")
             return
         }
+        console.log(formData.name)
         setTask([...task, formData.name]);
         
     }
