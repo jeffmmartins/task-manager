@@ -11,25 +11,19 @@ interface IFormInput{
     name:string;
 }
 
-
-
 export const Form: React.FC = () => {
-    const [task, setTask ] = useState<string[]>(['']);
+    const tasks = localStorage.getItem('tasks')
+    const info:string[] = JSON.parse(tasks || '[]')
+    const [task, setTask ] = useState<string[]>(info);
     const {register, handleSubmit} = useForm<IFormInput>();
 
-    useEffect(()=>{
-        const tasks = localStorage.getItem('task')
-        
-        const data = JSON.parse(tasks || '[]')
-        setTask(data ?? [])
-    },[])
+   
 
     const data = (formData: DataInput) => {
         if(!formData.name){
             alert("Favor Preencher campo")
             return
         }
-        console.log(formData.name)
         setTask([...task, formData.name]);
         
     }
@@ -38,9 +32,6 @@ export const Form: React.FC = () => {
         localStorage.setItem("tasks", JSON.stringify(task))
     },[task])
     
-
-    
-
     return (
         <>
             <S.ContainerSection>
