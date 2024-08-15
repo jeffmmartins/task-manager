@@ -11,16 +11,18 @@ interface IFormInput{
     name:string;
 }
 
+
+
 export const Form: React.FC = () => {
-    const [task, setTask ] = useState([""]);
+    const [task, setTask ] = useState(['']);
     const {register, handleSubmit} = useForm<IFormInput>();
 
     useEffect(()=>{
-        const tasks = localStorage.getItem("Tasks")
-        if (tasks === "") {
-            setTask(tasks);
-        }
-    },[task])
+        const tasks:string | null = localStorage.getItem('task')
+        
+        const Data = JSON.parse(tasks)
+        setTask(Data)
+    },[])
 
     const data = (formData: DataInput) => {
         if(!formData.name){
@@ -28,7 +30,7 @@ export const Form: React.FC = () => {
             return
         }
         setTask([...task, formData.name]);
-        reset();
+        
     }
 
     useEffect(()=>{
