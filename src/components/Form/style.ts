@@ -19,12 +19,14 @@ font-size: 1rem;
 font-weight: 500;
 padding: 5px;
 
+background-color: #0002;
 border-radius: 5px;
 `
 export const ButtonAddTask = styled.button`
 width: 35px;
 height: 32px;
 background-color: white;
+color: #08f;
 border: none;
 `
 
