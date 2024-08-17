@@ -35,7 +35,7 @@ export const Form: React.FC = () => {
     return (
         <>
             <S.ContainerSection>
-                {task}
+                {task.map((tasks,index) => (<ul><li key={index}>{tasks}</li></ul>))}
                 <S.FormTask onSubmit={handleSubmit(data)}>
                     <S.InputTask type="text" placeholder="Add Task" {...register("name")}/>
                     <S.ButtonAddTask><FaPlusCircle size={"32px"} /></S.ButtonAddTask>
