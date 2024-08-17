@@ -4,23 +4,23 @@ import { FaPlusCircle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 
 interface DataInput {
-    name:string;
+    name: string;
 }
 
-interface IFormInput{
-    name:string;
+interface IFormInput {
+    name: string;
 }
 
 export const Form: React.FC = () => {
     const tasks = localStorage.getItem('tasks')
-    const info:string[] = JSON.parse(tasks || '[]')
-    const [task, setTask ] = useState<string[]>(info);
-    const {register, handleSubmit, reset} = useForm<IFormInput>();
+    const info: string[] = JSON.parse(tasks || '[]')
+    const [task, setTask] = useState<string[]>(info);
+    const { register, handleSubmit, reset } = useForm<IFormInput>();
 
-   
+
 
     const data = (formData: DataInput) => {
-        if(!formData.name){
+        if (!formData.name) {
             alert("Favor Preencher campo")
             return
         }
@@ -28,26 +28,28 @@ export const Form: React.FC = () => {
         reset();
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(task))
-    },[task])
-    
+    }, [task])
+
     return (
         <>
             <S.ContainerSection>
-                {task.map((tasks,index) => (<ul><li key={index}>{tasks}</li></ul>))}
+
                 <S.FormTask onSubmit={handleSubmit(data)}>
-                    <S.InputTask type="text" placeholder="Add Task" {...register("name")}/>
+                    <S.InputTask type="text" placeholder="Add Task" {...register("name")} />
                     <S.ButtonAddTask><FaPlusCircle size={"32px"} /></S.ButtonAddTask>
                 </S.FormTask>
             </S.ContainerSection>
             <S.TaskSection>
-                <S.ListTask>
-                    <ul>
-                        <li>teste <button>remover</button></li>
-                        <li>teste <button>remover</button></li>
-                    </ul>
-                </S.ListTask>
+                <S.ContainerTask>
+                    {task.map((tasks, index) =>
+                    (<S.ListTasks>
+                        <li key={index}>{tasks} 
+                            <button>Remover</button>
+                        </li>
+                    </S.ListTasks>))}
+                </S.ContainerTask>
             </S.TaskSection>
         </>
     )
