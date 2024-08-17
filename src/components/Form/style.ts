@@ -47,4 +47,10 @@ padding: 0.5rem;
 export const ItemTask = styled.li`
 display: flex;
 justify-content: space-between;
+align-items: center;
+`
+
+export const ButtonCheck = styled.button`
+background: none;
+border: none;
 `

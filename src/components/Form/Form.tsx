@@ -47,7 +47,7 @@ export const Form: React.FC = () => {
                     {task.map((tasks, index) =>
                     (<S.ListTasks>
                         <S.ItemTask key={index}>{tasks} 
-                            <button><MdOutlineCheckBoxOutlineBlank/></button>
+                            <S.ButtonCheck><MdOutlineCheckBoxOutlineBlank size={"25px"}/></S.ButtonCheck>
                         </S.ItemTask>
                     </S.ListTasks>))}
                 </S.ContainerTask>
