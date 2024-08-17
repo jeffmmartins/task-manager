@@ -45,9 +45,9 @@ export const Form: React.FC = () => {
                 <S.ContainerTask>
                     {task.map((tasks, index) =>
                     (<S.ListTasks>
-                        <li key={index}>{tasks} 
+                        <S.ItemTask key={index}>{tasks} 
                             <button>Remover</button>
-                        </li>
+                        </S.ItemTask>
                     </S.ListTasks>))}
                 </S.ContainerTask>
             </S.TaskSection>

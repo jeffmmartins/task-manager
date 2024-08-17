@@ -41,5 +41,11 @@ box-shadow: 10px 10px 5px black;
 `
 
 export const ListTasks = styled.ul`
-
+list-style: none;
+padding: 0.5rem;
+`
+export const ItemTask = styled.li`
+display: flex;
+justify-content: space-between;
+border: 1px solid red;
 `
