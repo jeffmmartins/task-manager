@@ -36,7 +36,7 @@ align-items: center;
 
 `
 export const ContainerTask = styled.section`
-width: 515px;
+width: 600px;
 box-shadow: 10px 10px 5px black;
 `
 
@@ -47,5 +47,4 @@ padding: 0.5rem;
 export const ItemTask = styled.li`
 display: flex;
 justify-content: space-between;
-border: 1px solid red;
 `

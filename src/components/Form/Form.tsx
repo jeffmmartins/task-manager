@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import {MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
 
 interface DataInput {
     name: string;
@@ -46,7 +47,7 @@ export const Form: React.FC = () => {
                     {task.map((tasks, index) =>
                     (<S.ListTasks>
                         <S.ItemTask key={index}>{tasks} 
-                            <button>Remover</button>
+                            <button><MdOutlineCheckBoxOutlineBlank/></button>
                         </S.ItemTask>
                     </S.ListTasks>))}
                 </S.ContainerTask>
