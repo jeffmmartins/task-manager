@@ -19,7 +19,7 @@ font-size: 1rem;
 font-weight: 500;
 padding: 5px;
 
-background-color: #0002;
+background-color: #0001;
 border-radius: 5px;
 `
 export const ButtonAddTask = styled.button`
@@ -40,6 +40,7 @@ align-items: center;
 export const ContainerTask = styled.section`
 width: 600px;
 box-shadow: 10px 10px 5px black;
+border: 0.1px solid black;
 `
 
 export const ListTasks = styled.ul`
