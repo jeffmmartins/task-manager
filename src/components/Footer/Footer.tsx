@@ -2,7 +2,7 @@ export const Footer = () => {
     return(
         <>
         <footer>
-            Número de atividades realizadas
+            <p>Tarefas Feitas</p>
         </footer>
         </>
     )
