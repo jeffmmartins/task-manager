@@ -3,6 +3,7 @@ import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import {MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
+import { Footer } from "../Footer/Footer";
 
 interface DataInput {
     name: string;
@@ -36,7 +37,6 @@ export const Form: React.FC = () => {
     return (
         <>
             <S.ContainerSection>
-
                 <S.FormTask onSubmit={handleSubmit(data)}>
                     <S.InputTask type="text" placeholder="Add Task" {...register("name")} />
                     <S.ButtonAddTask><FaPlusCircle size={"32px"} /></S.ButtonAddTask>
@@ -52,6 +52,7 @@ export const Form: React.FC = () => {
                     </S.ListTasks>))}
                 </S.ContainerTask>
             </S.TaskSection>
+            <Footer tasks={task}/>
         </>
     )
 }
