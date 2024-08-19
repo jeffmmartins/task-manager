@@ -40,7 +40,7 @@ align-items: center;
 export const ContainerTask = styled.section`
 width: 600px;
 box-shadow: 10px 10px 5px black;
-border: 0.1px solid black;
+border: 0.1px solid #0002;
 `
 
 export const ListTasks = styled.ul`
