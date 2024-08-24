@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
     return (
         <>
             <S.Container>
-                <S.Title><BsRocketFill/> To do List</S.Title>
+                <S.Title><BsRocketFill/> Task Manager</S.Title>
             </S.Container>
         </>
     )

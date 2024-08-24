@@ -11,4 +11,5 @@ margin: 50px;
 export const Text = styled.p`
 font-family: "Poppins", sans-serif;
 font-weight: 600;
+font-size: 1.5rem;
 `

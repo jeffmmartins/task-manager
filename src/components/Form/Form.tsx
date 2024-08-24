@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
-import {MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
+import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
 import { TaskCount } from "../TaskCount/TaskCount";
 
 interface DataInput {
@@ -15,8 +15,6 @@ interface IFormInput {
 }
 
 
-
-
 export const Form: React.FC = () => {
     const tasks = localStorage.getItem('tasks')
     const info: string[] = JSON.parse(tasks || '[]')
@@ -26,10 +24,10 @@ export const Form: React.FC = () => {
 
 
     const data = (formData: DataInput) => {
-       if(!formData.task){
-        alert("Favor Preencher o campo corretamente")
-        return
-       }
+        if (!formData.task) {
+            alert("Favor Preencher o campo corretamente")
+            return
+        }
         setTask([...task, formData.task]);
         reset();
     }
@@ -38,12 +36,12 @@ export const Form: React.FC = () => {
         localStorage.setItem("tasks", JSON.stringify(task))
     }, [task])
 
-    
+
     const remove = (index: number) => {
-        const newTask = task.filter((_,i)=> i !== index)
+        const newTask = task.filter((_, i) => i !== index)
         setTask(newTask)
     }
-    
+
 
     return (
         <>
@@ -52,17 +50,17 @@ export const Form: React.FC = () => {
                     <S.InputTask type="text" placeholder="Add Task"  {...register("task")} />
                     <S.ButtonAddTask><FaPlusCircle size={"32px"} /></S.ButtonAddTask>
                 </S.FormTask>
-                <TaskCount tasks={task}/>
+                <TaskCount tasks={task} />
             </S.ContainerSection>
             <S.TaskSection>
                 <S.ContainerTask>
                     <S.TextTaskCount>
                         To Do
                     </S.TextTaskCount>
-                    {task.map((tasks,index) =>
+                    {task.map((tasks, index) =>
                     (<S.ListTasks>
-                        <S.ItemTask key={index}>{tasks} 
-                            <S.ButtonCheck onClick={() => (remove(index))}><MdOutlineCheckBoxOutlineBlank size={"25px"}/></S.ButtonCheck>
+                        <S.ItemTask key={index}>{tasks}
+                            <S.ButtonCheck onClick={() => (remove(index))}><MdOutlineCheckBoxOutlineBlank size={"25px"} /></S.ButtonCheck>
                         </S.ItemTask>
                     </S.ListTasks>
                     ))}

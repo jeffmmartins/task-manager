@@ -63,5 +63,4 @@ text-align: center;
 font-family: "Poppins", sans-serif;
 font-weight: 900;
 background-color: #0002;
-
 `
