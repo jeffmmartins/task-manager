@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import uuid from "react-uuid";
 import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import {MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
 import { Footer } from "../Footer/Footer";
+import { TaskCount } from "../TaskCount/TaskCount";
 
 interface DataInput {
     name: string;
@@ -53,6 +53,7 @@ export const Form: React.FC = () => {
                     <S.InputTask type="text" placeholder="Add Task"  {...register("name")} />
                     <S.ButtonAddTask><FaPlusCircle size={"32px"} /></S.ButtonAddTask>
                 </S.FormTask>
+                <TaskCount tasks={task}/>
             </S.ContainerSection>
             <S.TaskSection>
 
@@ -66,7 +67,6 @@ export const Form: React.FC = () => {
                     </S.ContainerTask>))}
                 
             </S.TaskSection>
-            <Footer tasks={task}/>
         </>
     )
 }
