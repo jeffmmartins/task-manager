@@ -56,16 +56,16 @@ export const Form: React.FC = () => {
                 <TaskCount tasks={task}/>
             </S.ContainerSection>
             <S.TaskSection>
-
+                <S.ContainerTask>
+                    <p>To Do</p>
                     {task.map((tasks,index) =>
-                    (<S.ContainerTask>
-                    <S.ListTasks>
+                    (<S.ListTasks>
                         <S.ItemTask key={index}>{tasks} 
                             <S.ButtonCheck onClick={() => (remove(index))}><MdOutlineCheckBoxOutlineBlank size={"25px"}/></S.ButtonCheck>
                         </S.ItemTask>
                     </S.ListTasks>
-                    </S.ContainerTask>))}
-                
+                    ))}
+                </S.ContainerTask>
             </S.TaskSection>
         </>
     )
