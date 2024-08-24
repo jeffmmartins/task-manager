@@ -34,6 +34,11 @@ export const Form: React.FC = () => {
         localStorage.setItem("tasks", JSON.stringify(task))
     }, [task])
 
+    const remove = () => {
+        const newTask = task.filter(()=>)
+    }
+    
+
     return (
         <>
             <S.ContainerSection>
@@ -47,7 +52,7 @@ export const Form: React.FC = () => {
                     {task.map((tasks, index) =>
                     (<S.ListTasks>
                         <S.ItemTask key={index}>{tasks} 
-                            <S.ButtonCheck><MdOutlineCheckBoxOutlineBlank size={"25px"}/></S.ButtonCheck>
+                            <S.ButtonCheck onClick={remove}><MdOutlineCheckBoxOutlineBlank size={"25px"}/></S.ButtonCheck>
                         </S.ItemTask>
                     </S.ListTasks>))}
                 </S.ContainerTask>
