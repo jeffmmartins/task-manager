@@ -39,7 +39,7 @@ align-items: center;
 `
 export const ContainerTask = styled.section`
 width: 600px;
-box-shadow: 10px 10px 5px black;
+box-shadow: 5px 5px 5px #0002;
 border: 0.1px solid #0002;
 `
 
