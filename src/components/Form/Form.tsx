@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import {MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
-import { Footer } from "../Footer/Footer";
 import { TaskCount } from "../TaskCount/TaskCount";
 
 interface DataInput {
