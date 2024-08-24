@@ -57,3 +57,11 @@ export const ButtonCheck = styled.button`
 background: none;
 border: none;
 `
+
+export const TextTaskCount = styled.p`
+text-align: center;
+font-family: "Poppins", sans-serif;
+font-weight: 900;
+background-color: #0002;
+
+`

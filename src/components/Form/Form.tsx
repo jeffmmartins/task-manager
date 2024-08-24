@@ -56,7 +56,9 @@ export const Form: React.FC = () => {
             </S.ContainerSection>
             <S.TaskSection>
                 <S.ContainerTask>
-                    <p>To Do</p>
+                    <S.TextTaskCount>
+                        To Do
+                    </S.TextTaskCount>
                     {task.map((tasks,index) =>
                     (<S.ListTasks>
                         <S.ItemTask key={index}>{tasks} 
