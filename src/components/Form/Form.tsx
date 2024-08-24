@@ -6,12 +6,12 @@ import {MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
 import { TaskCount } from "../TaskCount/TaskCount";
 
 interface DataInput {
-    name: string;
+    task: string;
 
 }
 
 interface IFormInput {
-    name: string;
+    task: string;
 }
 
 
@@ -26,11 +26,11 @@ export const Form: React.FC = () => {
 
 
     const data = (formData: DataInput) => {
-        if (!formData) {
-            alert("Favor Preencher campo")
-            return
-        }
-        setTask([...task, formData.name]);
+       if(!formData.task){
+        alert("Favor Preencher o campo corretamente")
+        return
+       }
+        setTask([...task, formData.task]);
         reset();
     }
 
@@ -49,7 +49,7 @@ export const Form: React.FC = () => {
         <>
             <S.ContainerSection>
                 <S.FormTask onSubmit={handleSubmit(data)}>
-                    <S.InputTask type="text" placeholder="Add Task"  {...register("name")} />
+                    <S.InputTask type="text" placeholder="Add Task"  {...register("task")} />
                     <S.ButtonAddTask><FaPlusCircle size={"32px"} /></S.ButtonAddTask>
                 </S.FormTask>
                 <TaskCount tasks={task}/>
