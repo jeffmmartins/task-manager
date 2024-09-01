@@ -34,9 +34,8 @@ export const TaskSection = styled.section`
 display: flex;
 justify-content: center;
 align-items: center;
-
-
 `
+
 export const ContainerTask = styled.section`
 width: 600px;
 box-shadow: 5px 5px 5px #0002;
@@ -64,7 +63,7 @@ export const InputCheck = styled.input.attrs({type: "checkbox"})`
 
 &:hover{
     background-color: #AAE095;
-    transition: 0.9s;
+    transition: 0.5s;
 }
 `
 
@@ -72,6 +71,6 @@ export const TextTaskCount = styled.p`
 text-align: center;
 font-family: "Poppins", sans-serif;
 font-weight: 900;
-background-color: #0002;
-color: red;
+background-color: #0001;
+color: black;
 `

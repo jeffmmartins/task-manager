@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
-import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
 import { TaskCount } from "../TaskCount/TaskCount";
 
 interface DataInput {
@@ -58,9 +57,7 @@ export const Form: React.FC = () => {
                     {task.map((tasks, index) =>
                     (<S.ListTasks>
                         <S.ItemTask key={index}>{tasks}
-                            
                             <S.InputCheck onClick={() => (remove(index))}></S.InputCheck>
-                            
                         </S.ItemTask>
                     </S.ListTasks>
                     ))}
