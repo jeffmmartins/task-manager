@@ -52,12 +52,15 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 `
+export const LabelCheck = styled.label`
+cursor: pointer;
+
+&:hover{
+    background-color: green;
+}
+`
 
 export const InputCheck = styled.input.attrs({type: "checkbox"})`
-
-
-
-
 
 `
 

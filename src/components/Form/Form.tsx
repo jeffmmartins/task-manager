@@ -60,7 +60,9 @@ export const Form: React.FC = () => {
                     {task.map((tasks, index) =>
                     (<S.ListTasks>
                         <S.ItemTask key={index}>{tasks}
+                            <S.LabelCheck>
                             <S.InputCheck onClick={() => (remove(index))}></S.InputCheck>
+                            </S.LabelCheck>
                         </S.ItemTask>
                     </S.ListTasks>
                     ))}
