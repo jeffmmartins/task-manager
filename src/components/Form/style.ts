@@ -52,16 +52,20 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 `
-export const LabelCheck = styled.label`
-cursor: pointer;
-
-&:hover{
-    background-color: green;
-}
-`
 
 export const InputCheck = styled.input.attrs({type: "checkbox"})`
+ /* Estilo padrão do checkbox */
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
 
+&:hover{
+    background-color: #AAE095;
+    transition: 0.9s;
+}
 `
 
 export const TextTaskCount = styled.p`
