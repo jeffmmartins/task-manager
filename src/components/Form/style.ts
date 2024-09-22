@@ -62,7 +62,7 @@ export const InputCheck = styled.input.attrs({type: "checkbox"})`
   background-color: white;
 
 &:hover{
-    background-color: #AAE095;
+    background-color: #08f;
     transition: 0.5s;
 }
 `
