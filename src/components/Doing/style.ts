@@ -4,6 +4,7 @@ export const TaskDoing = styled.section`
     width: 600px;
     box-shadow: 5px 5px 5px #0002;
     border: 0.1px solid #0002;
+    margin-left: 15px;
 `
 export const TitleDoing = styled.p`
     text-align: center;

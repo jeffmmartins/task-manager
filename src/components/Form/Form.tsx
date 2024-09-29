@@ -63,7 +63,6 @@ export const Form: React.FC = () => {
                     </S.ListTasks>
                     ))}
                 </S.ContainerTask>
-                <Doing/>
             </S.TaskSection>
         </>
     )
