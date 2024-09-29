@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import { TaskCount } from "../TaskCount/TaskCount";
+import { Doing } from "../Doing/Doing";
 
 interface DataInput {
     task: string;
@@ -62,6 +63,7 @@ export const Form: React.FC = () => {
                     </S.ListTasks>
                     ))}
                 </S.ContainerTask>
+                <Doing/>
             </S.TaskSection>
         </>
     )
