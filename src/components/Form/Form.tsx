@@ -4,6 +4,7 @@ import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import { TaskCount } from "../TaskCount/TaskCount";
 import { Doing } from "../Doing/Doing";
+import { TaskDoing } from "../Doing/style";
 
 interface DataInput {
     task: string;
@@ -20,7 +21,9 @@ export const Form: React.FC = () => {
     const [task, setTask] = useState<string[]>(info);
     const { register, handleSubmit, reset } = useForm<IFormInput>();
 
-    const [taskDoing, setTaskDoing] = useState()
+    const tasksDoing = localStorage.getItem("TaskDoing")
+    const values: string[] = JSON.parse(tasksDoing || "[]")
+    const [taskDoing, setTaskDoing] = useState<string[]>(values)
 
 
 
@@ -36,6 +39,10 @@ export const Form: React.FC = () => {
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(task))
     }, [task])
+
+    useEffect(() => {
+        localStorage.setItem("TaskDoing", JSON.stringify(taskDoing))
+    },[taskDoing])
 
 
     const remove = (index: number) => {
@@ -66,7 +73,7 @@ export const Form: React.FC = () => {
                     </S.ListTasks>
                     ))}
                 </S.ContainerTask>
-                <Doing/>
+                <Doing tarefas = {taskDoing}/>
             </S.TaskSection>
         </>
     )
