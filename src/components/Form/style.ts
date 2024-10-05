@@ -3,10 +3,6 @@ import  { styled } from "styled-components";
 
 export const ContainerSection = styled.section`
 margin-bottom: 50px;
-
-@meida (max-width: 768px;){
-  width: 100%
-}
 `
 
 export const FormTask = styled.form`
@@ -14,6 +10,14 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 0.5rem;
+
+@meida (max-width: 768px;){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  
+}
 `
 
 export const InputTask = styled.input`

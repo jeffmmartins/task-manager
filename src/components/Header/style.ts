@@ -7,6 +7,14 @@ max-width: 1920px;
 background-color: #0001;
 
 border-radius: 0px 0px 100px 100px;
+
+@media (max-width: 768px){
+    padding: 30px;
+    text-align: center;
+    width: 520px;
+    background-color: #0001;
+    border-radius: 0px 0px 100px 100px;
+}
 `
 export const Title = styled.h1`
 color: #08f;
