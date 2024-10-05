@@ -7,7 +7,6 @@ import { Doing } from "../Doing/Doing";
 
 interface DataInput {
     task: string;
-
 }
 
 interface IFormInput {
@@ -20,6 +19,8 @@ export const Form: React.FC = () => {
     const info: string[] = JSON.parse(tasks || '[]')
     const [task, setTask] = useState<string[]>(info);
     const { register, handleSubmit, reset } = useForm<IFormInput>();
+
+    const [taskDoing, setTaskDoing] = useState()
 
 
 
@@ -39,7 +40,9 @@ export const Form: React.FC = () => {
 
     const remove = (index: number) => {
         const newTask = task.filter((_, i) => i !== index)
+        const newTaskDoing = task.filter((_, i)=> i == index) // fica tarefa que vai para o doing
         setTask(newTask)
+        setTaskDoing(newTaskDoing);
     }
 
 
