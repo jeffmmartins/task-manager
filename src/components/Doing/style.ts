@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
 export const TaskDoing = styled.section`
-    width: 600px;
+    width: 100%;
     box-shadow: 5px 5px 5px #0002;
     border: 0.1px solid #0002;
-    margin-left: 15px;
+    
+
+    @media (max-width: 768px) {
+        margin-top: 20px;
+        width: 100%;
+    }
 `
 export const TitleDoing = styled.p`
     text-align: center;

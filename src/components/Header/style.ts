@@ -11,7 +11,7 @@ border-radius: 0px 0px 100px 100px;
 @media (max-width: 768px){
     padding: 30px;
     text-align: center;
-    width: 520px;
+    width: 100%;
     background-color: #0001;
     border-radius: 0px 0px 100px 100px;
 }
