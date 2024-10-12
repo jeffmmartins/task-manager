@@ -30,3 +30,18 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 `
+
+export const InputTask = styled.input.attrs({type: "checkbox"})`
+ /* Estilo padrão do checkbox */
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+
+&:hover{
+    background-color: #08f;
+    transition: 0.5s;
+}
+`
