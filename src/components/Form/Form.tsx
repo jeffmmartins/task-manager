@@ -4,7 +4,7 @@ import * as S from "./style"
 import { FaPlusCircle } from "react-icons/fa";
 import { TaskCount } from "../TaskCount/TaskCount";
 import { Doing } from "../Doing/Doing";
-import { TaskDoing } from "../Doing/style";
+
 
 interface DataInput {
     task: string;
@@ -73,7 +73,7 @@ export const Form: React.FC = () => {
                     </S.ListTasks>
                     ))}
                 </S.ContainerTask>
-                <Doing tarefas = {taskDoing}/>
+                {taskDoing && <Doing tarefas = {taskDoing}/>}
             </S.TaskSection>
         </>
     )
