@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 
 export const TaskDoing = styled.section`
-    width: 100%;
-    box-shadow: 5px 5px 5px #0002;
+    width: 800px;
+    box-shadow: 5px 5px 5px #FDECC8;
     border: 0.1px solid #0002;
     margin-top: 30px;
     
@@ -19,6 +19,7 @@ export const TitleDoing = styled.p`
     font-weight: 900;
     background-color: #0001;
     color: black;
+    font-size: 2rem;
 `
 
 export const ListDoing = styled.ul`

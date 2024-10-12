@@ -34,10 +34,10 @@ border: none;
 
 export const TaskSection = styled.section`
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
-flex-direction: column;
-width: 100%;
+
 
 @media (max-width: 768px) {
     display: flex;
@@ -47,8 +47,9 @@ width: 100%;
 `
 
 export const ContainerTask = styled.section`
-width: 100%;
-box-shadow: 5px 5px 5px #0002;
+text-align: center;
+width: 800px;
+box-shadow: 5px 5px 5px #FADEC9;
 border: 0.1px solid #0002;
 
 @media (max-width: 768px) {
@@ -86,5 +87,6 @@ text-align: center;
 font-family: "Poppins", sans-serif;
 font-weight: 900;
 background-color: #0001;
-color: #DB6262;
+color: black;
+font-size: 2rem;
 `
