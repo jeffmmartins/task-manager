@@ -73,7 +73,7 @@ export const Form: React.FC = () => {
                     </S.ListTasks>
                     ))}
                 </S.ContainerTask>
-                {taskDoing && <Doing tarefas = {taskDoing}/>}
+                {taskDoing && <Doing tarefas = {taskDoing} setTaskDoing = {setTaskDoing}/>}
             </S.TaskSection>
         </>
     )

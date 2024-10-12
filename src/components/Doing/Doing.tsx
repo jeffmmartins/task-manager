@@ -1,21 +1,32 @@
+
 import * as S from "./style";
 
 interface MyComponentsProps {
     tarefas: string[];
+    setTaskDoing: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-export const Doing: React.FC<MyComponentsProps> = ({ tarefas }) => {
+
+
+export const Doing: React.FC<MyComponentsProps> = ({ tarefas, setTaskDoing }) => {
+
+
+    const removeTask = () => {
+        setTaskDoing([])
+    }
+
     return (
         <>
             <S.TaskDoing>
                 <S.TitleDoing>Doing</S.TitleDoing>
-                <S.ListDoing>
-                    {tarefas.map((tarefa: string, index: number) => (
+                {tarefas.map((tarefa: string, index: number) => (
+                    <S.ListDoing>
                         <S.ItemDoing key={index}>{tarefa}
-                        <S.InputTask></S.InputTask>
+                            <S.InputTask onClick={removeTask}></S.InputTask>
                         </S.ItemDoing>
-                    ))}
-                </S.ListDoing>
+                    </S.ListDoing>
+                ))}
+
             </S.TaskDoing>
         </>
     )
