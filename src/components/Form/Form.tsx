@@ -17,12 +17,12 @@ interface IFormInput {
 
 export const Form: React.FC = () => {
     const tasks = localStorage.getItem('tasks')
-    const info: string[] = JSON.parse(tasks || '[]')
+    const info: string[] = JSON.parse(tasks || "[]")
     const [task, setTask] = useState<string[]>(info);
     const { register, handleSubmit, reset } = useForm<IFormInput>();
 
     const tasksDoing = localStorage.getItem("TaskDoing")
-    const values: string[] = JSON.parse(tasksDoing || "[]")
+    const values: string[] = JSON.parse(tasksDoing || "")
     const [taskDoing, setTaskDoing] = useState<string[]>(values)
 
 
@@ -73,7 +73,7 @@ export const Form: React.FC = () => {
                     </S.ListTasks>
                     ))}
                 </S.ContainerTask>
-                {taskDoing && <Doing tarefas = {taskDoing} setTaskDoing = {setTaskDoing}/>}
+                {taskDoing.length > 0 ? <Doing tarefas = {taskDoing} setTaskDoing = {setTaskDoing}/>  : ""}
             </S.TaskSection>
         </>
     )
