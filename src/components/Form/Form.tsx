@@ -22,7 +22,7 @@ export const Form: React.FC = () => {
     const { register, handleSubmit, reset } = useForm<IFormInput>();
 
     const tasksDoing = localStorage.getItem("TaskDoing")
-    const values: string[] = JSON.parse(tasksDoing || "")
+    const values: string[] = JSON.parse(tasksDoing || "[]")
     const [taskDoing, setTaskDoing] = useState<string[]>(values)
 
 
